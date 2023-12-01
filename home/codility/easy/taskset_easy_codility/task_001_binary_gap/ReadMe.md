@@ -33,3 +33,16 @@ To solve this problem, we can convert the integer `N` into its binary representa
 5. **Return the Maximum Gap**: After iterating through the entire string, return the maximum gap found.
 
 This function should work efficiently for the given range of integers `[1..2,147,483,647]`. The time complexity is O(log N) since the binary representation of a number `N` has a length proportional to the logarithm of `N`, and the space complexity is also O(log N) due to the storage of the binary representation.
+
+### Why use `binaryN := strconv.FormatInt(int64(N), 2)`
+
+In Go, the `strconv.FormatInt` function requires an argument of type `int64`. If your variable `N` is declared as an `int`, which could be either `int32` or `int64` depending on the system architecture (32-bit or 64-bit), it's good practice to explicitly convert it to `int64` to ensure compatibility with the `FormatInt` function.
+
+This conversion ensures that your program behaves consistently across different platforms, as `int` in Go is architecture dependent:
+
+- On a 32-bit system, `int` is equivalent to `int32`.
+- On a 64-bit system, `int` is equivalent to `int64`.
+
+By explicitly converting `N` to `int64`, you make sure that the `FormatInt` function receives the correct type regardless of the underlying architecture, thereby making your code more portable. 
+
+If `N` is already an `int64`, then the explicit conversion is not necessary, but it does not harm and makes the code more explicit and possibly clearer.
