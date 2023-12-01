@@ -8,7 +8,7 @@
 
 ## Codility
 
-| Codility                             |
+| Codility_easy                        |
 |--------------------------------------|
 | [Practice Tasks](home/codility/easy) |
 
