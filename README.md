@@ -1,6 +1,6 @@
 # Home 
 
-> Total Number of Tasks :        1
+> Total Number of Tasks :        2
 
 > Auto generated ReadMe
 
@@ -8,7 +8,7 @@
 
 ## Codility
 
-| Easy                                 |
-|--------------------------------------|
-| [Practice Tasks](home/codility/easy) |
+| Easy                                 | Medium                                 |
+|--------------------------------------|----------------------------------------|
+| [Practice Tasks](home/codility/easy) | [Practice Tasks](home/codility/medium) |
 
