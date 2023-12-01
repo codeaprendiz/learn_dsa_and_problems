@@ -1,8 +1,8 @@
-## taskset_codility_easy
+## taskset_easy_codility
 
 > Auto generated ReadMe
 
 | Task     | Description                                                      |
 |----------|------------------------------------------------------------------|
-| task_001 | [task_001_binary_gap](taskset_codility_easy/task_001_binary_gap) |
+| task_001 | [task_001_binary_gap](taskset_easy_codility/task_001_binary_gap) |
 
