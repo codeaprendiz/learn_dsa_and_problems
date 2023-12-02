@@ -2,6 +2,17 @@
 
 [leetcode.com » BinaryGap](https://leetcode.com/problems/binary-gap/)
 
+## Setup
+
+```bash
+$ go mod init binary_gap       
+go: creating new go.mod: module binary_gap
+go: to add module requirements and sums:
+        go mod tidy
+
+
+```
+
 ## Question
 
 ### Binary Distance Challenge
