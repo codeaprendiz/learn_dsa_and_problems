@@ -17,16 +17,13 @@ go: to add module requirements and sums:
         go mod tidy
 
 $ go test
-Input : 805306373, Expected : 25, Result : 25
-Input : 1073741825, Expected : 29, Result : 29
-Input : 1376796946, Expected : 5, Result : 5
-Input : 1610612737, Expected : 28, Result : 28
-Input : 2147483647, Expected : 0, Result : 0
-Input : 74901729, Expected : 4, Result : 4
 
+Input : 9, Expected : 2, Result : 2, binaryN : 1001     --------- Pass
+Input : 7778742049, Expected : 4, Result : 4, binaryN : 111001111101001100010111100100001     --------- Pass
+Input : 12586269025, Expected : 4, Result : 4, binaryN : 1011101110001100110011100101100001     --------- Pass
 Overall Result
 PASS
-ok      binary_gap      1.030s 
+ok      binary_gap      0.471s
 ```
 
 ## Approach
