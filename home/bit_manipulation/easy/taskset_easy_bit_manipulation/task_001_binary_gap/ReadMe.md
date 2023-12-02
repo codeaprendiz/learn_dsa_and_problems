@@ -10,7 +10,17 @@ go: creating new go.mod: module binary_gap
 go: to add module requirements and sums:
         go mod tidy
 
-$ 
+$ go test
+Input : 805306373, Expected : 25, Result : 25
+Input : 1073741825, Expected : 29, Result : 29
+Input : 1376796946, Expected : 5, Result : 5
+Input : 1610612737, Expected : 28, Result : 28
+Input : 2147483647, Expected : 0, Result : 0
+Input : 74901729, Expected : 4, Result : 4
+
+Overall Result
+PASS
+ok      binary_gap      1.030s 
 ```
 
 ## Question
