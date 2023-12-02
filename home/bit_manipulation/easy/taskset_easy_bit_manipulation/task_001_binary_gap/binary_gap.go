@@ -33,9 +33,15 @@ func Solution(N int) int {
 }
 
 func main() {
+	/*
+		In order to test by following
+			$ go run binary_go.go
+		Make the following changes
+			import "fmt"
+			package main
+	*/
 
-	// You will have to make the package name as main, to uncomment the following and test by » go run binary_go.go
-	// fmt.Println(Solution(6291457))    // returns 20
+	// fmt.Println(Solution(6291457)) // returns 20
 	// fmt.Println(Solution(74901729))   // returns 4
 	// fmt.Println(Solution(805306373))  // returns 25
 	// fmt.Println(Solution(1073741825)) // returns 29
