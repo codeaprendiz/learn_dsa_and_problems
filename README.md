@@ -4,11 +4,11 @@
 
 > Auto generated ReadMe
 
-- [Codility](#Codility)
+- [Bit Manipulation](#Bit_manipulation)
 
-## Codility
+## Bit_manipulation
 
-| Easy                                 | Medium                                 |
-|--------------------------------------|----------------------------------------|
-| [Practice Tasks](home/codility/easy) | [Practice Tasks](home/codility/medium) |
+| Easy                                         | Medium                                         |
+|----------------------------------------------|------------------------------------------------|
+| [Practice Tasks](home/bit_manipulation/easy) | [Practice Tasks](home/bit_manipulation/medium) |
 
