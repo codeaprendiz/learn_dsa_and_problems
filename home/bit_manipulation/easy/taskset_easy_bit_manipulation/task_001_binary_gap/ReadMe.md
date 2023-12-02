@@ -4,11 +4,6 @@
 
 - [Binary Gap](#binary-gap)
   - [Setup](#setup)
-  - [Question](#question)
-    - [Binary Distance Challenge](#binary-distance-challenge)
-      - [Objective](#objective)
-      - [Scenarios](#scenarios)
-      - [Limits](#limits)
   - [Approach](#approach)
     - [Why use `binaryN := strconv.FormatInt(int64(N), 2)`](#why-use-binaryn--strconvformatintint64n-2)
     - [Why us string(bit) to print Binary](#why-us-stringbit-to-print-binary)
@@ -33,41 +28,6 @@ Overall Result
 PASS
 ok      binary_gap      1.030s 
 ```
-
-## Question
-
-### Binary Distance Challenge
-
-**Level**: Beginner
-
-**Industries**: Various
-
-#### Objective
-
-Write a function to determine the largest gap between any two consecutive `1` bits in the binary form of a given positive integer `x`. If no consecutive `1` bits are present, the function should return `0`.
-
-The "gap" is defined as the number of bit positions between two consecutive `1` bits in the binary representation of the number. For example, in `1001`, the gap between the two `1` bits is `3`.
-
-#### Scenarios
-
-1. **Scenario 1**:
-   - **Input**: `x = 13`
-   - **Output**: `1`
-   - **Explanation**: The binary form of 13 is `1101`. The largest gap between consecutive `1` bits is 1.
-
-2. **Scenario 2**:
-   - **Input**: `x = 9`
-   - **Output**: `3`
-   - **Explanation**: The binary form of 9 is `1001`. The gap between the two `1` bits is 3.
-
-3. **Scenario 3**:
-   - **Input**: `x = 20`
-   - **Output**: `1`
-   - **Explanation**: The binary form of 20 is `10100`. The largest gap between consecutive `1` bits is 1.
-
-#### Limits
-
-- The input integer `x` will satisfy `1 <= x <= 1,000,000,000`.
 
 ## Approach
 
