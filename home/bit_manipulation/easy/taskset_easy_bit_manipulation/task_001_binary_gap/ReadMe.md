@@ -2,6 +2,17 @@
 
 [leetcode.com » BinaryGap](https://leetcode.com/problems/binary-gap/)
 
+- [Binary Gap](#binary-gap)
+  - [Setup](#setup)
+  - [Question](#question)
+    - [Binary Distance Challenge](#binary-distance-challenge)
+      - [Objective](#objective)
+      - [Scenarios](#scenarios)
+      - [Limits](#limits)
+  - [Approach](#approach)
+    - [Why use `binaryN := strconv.FormatInt(int64(N), 2)`](#why-use-binaryn--strconvformatintint64n-2)
+    - [Why us string(bit) to print Binary](#why-us-stringbit-to-print-binary)
+
 ## Setup
 
 ```bash
