@@ -10,7 +10,7 @@ go: creating new go.mod: module binary_gap
 go: to add module requirements and sums:
         go mod tidy
 
-
+$ 
 ```
 
 ## Question

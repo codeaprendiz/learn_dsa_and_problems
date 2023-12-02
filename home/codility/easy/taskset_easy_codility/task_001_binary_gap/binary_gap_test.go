@@ -20,7 +20,8 @@ func TestSolution(t *testing.T) {
 		if result != expected {
 			t.Errorf("\n\nSolution(%d) = %d; expected %d", input, result, expected)
 		} else {
-			fmt.Printf("\nInput : %v, Expected : %v, Result : %v", input, expected, result)
+			fmt.Printf("Input : %v, Expected : %v, Result : %v\n", input, expected, result)
 		}
 	}
+	fmt.Printf("\nOverall Result\n")
 }
