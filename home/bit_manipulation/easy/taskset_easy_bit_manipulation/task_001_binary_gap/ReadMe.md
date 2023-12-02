@@ -42,17 +42,17 @@ The "gap" is defined as the number of bit positions between two consecutive `1` 
 1. **Scenario 1**:
    - **Input**: `x = 13`
    - **Output**: `1`
-   - **Explanation**: The binary form of 13 is "1101". The largest gap between consecutive `1` bits is 1.
+   - **Explanation**: The binary form of 13 is `1101`. The largest gap between consecutive `1` bits is 1.
 
 2. **Scenario 2**:
    - **Input**: `x = 9`
    - **Output**: `3`
-   - **Explanation**: The binary form of 9 is "1001". The gap between the two `1` bits is 3.
+   - **Explanation**: The binary form of 9 is `1001`. The gap between the two `1` bits is 3.
 
 3. **Scenario 3**:
    - **Input**: `x = 20`
    - **Output**: `1`
-   - **Explanation**: The binary form of 20 is "10100". The largest gap between consecutive `1` bits is 1.
+   - **Explanation**: The binary form of 20 is `10100`. The largest gap between consecutive `1` bits is 1.
 
 #### Limits
 
@@ -87,4 +87,3 @@ If `N` is already an `int64`, then the explicit conversion is not necessary, but
 
 In Go, when you iterate over a string with a range loop, each character (or more precisely, each rune) is represented by its Unicode code point. The Unicode code points for the characters '0' and `1` are 48 and 49, respectively, in decimal. That's why you see 48 when you print a '0' bit and 49 when you print a `1` bit. 
 If you want to print the character itself ('0' or `1`) rather than its Unicode code point, you need to convert the rune back into a character. This can be done simply by using the string() function to convert the rune to a string
-
