@@ -1,8 +1,9 @@
-// package concatenation_of_array
-package main
+package concatenation_of_array
+
+// package main
 
 import (
-	"fmt"
+// "fmt"
 )
 
 func getConcatenation(nums []int) []int {
@@ -16,7 +17,7 @@ func getConcatenation(nums []int) []int {
 }
 
 func main() {
-	firstArray := []int{1, 2, 1}
-	ans := getConcatenation(firstArray)
-	fmt.Println(ans)
+	// firstArray := []int{1, 2, 1}
+	// ans := getConcatenation(firstArray)
+	// fmt.Println(ans)
 }
