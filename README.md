@@ -1,11 +1,12 @@
 # Home 
 
-> Total Number of Tasks :        3
+> Total Number of Tasks :        4
 
 > Auto generated ReadMe
 
 - [Bit Manipulation](#Bit_manipulation)
 - [Arrays](#Arrays)
+- [String](#String)
 
 ## Bit_manipulation
 
@@ -18,4 +19,10 @@
 | Easy                               |
 |------------------------------------|
 | [Practice Tasks](home/arrays/easy) |
+
+## String
+
+| Easy                               |
+|------------------------------------|
+| [Practice Tasks](home/string/easy) |
 
