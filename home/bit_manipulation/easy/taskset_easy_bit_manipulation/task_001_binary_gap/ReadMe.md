@@ -7,7 +7,6 @@
   - [Approach](#approach)
     - [Why use `binaryN := strconv.FormatInt(int64(N), 2)`](#why-use-binaryn--strconvformatintint64n-2)
     - [Why us string(bit) to print Binary](#why-us-stringbit-to-print-binary)
-  - [Time and Space Complexity](#time-and-space-complexity)
 
 ## Setup
 
@@ -56,8 +55,3 @@ If `N` is already an `int64`, then the explicit conversion is not necessary, but
 
 In Go, when you iterate over a string with a range loop, each character (or more precisely, each rune) is represented by its Unicode code point. The Unicode code points for the characters '0' and `1` are 48 and 49, respectively, in decimal. That's why you see 48 when you print a '0' bit and 49 when you print a `1` bit. 
 If you want to print the character itself ('0' or `1`) rather than its Unicode code point, you need to convert the rune back into a character. This can be done simply by using the string() function to convert the rune to a string
-
-## Time and Space Complexity
-
-- Time Complexity: `O(log N)`
-- Space Complexity: `O(log N)`
