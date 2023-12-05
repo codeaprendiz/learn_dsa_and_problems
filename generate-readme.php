@@ -117,6 +117,7 @@ function createGlobalMarkdownTable($tree) {
     // ls -ltrh home | egrep -v "total" | awk '{print "\"" $9 "\","}' | sort
     $topics = array(
         "bit_manipulation",
+        "arrays",
     );
     
     // for every value in topics array, print - [value](#value)
