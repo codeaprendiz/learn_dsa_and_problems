@@ -18,3 +18,8 @@ Overall Result
 PASS
 ok      concatenation_of_array  1.120s
 ```
+
+## Time and Space Complexity
+
+- **Time Complexity**: `O(n)`
+- **Space Complexity**: `O(n)`
