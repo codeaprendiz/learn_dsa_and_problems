@@ -119,6 +119,7 @@ function createGlobalMarkdownTable($tree) {
         "bit_manipulation",
         "arrays",
         "string",
+        "list",
     );
     
     // for every value in topics array, print - [value](#value)

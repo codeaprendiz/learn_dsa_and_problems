@@ -2,7 +2,7 @@
 
 > Auto generated ReadMe
 
-| Task     | Description                                            |
-|----------|--------------------------------------------------------|
+| Task | Description |
+| --- | --- |
 | task_001 | [task_001_](taskset_medium_bit_manipulation/task_001_) |
 
