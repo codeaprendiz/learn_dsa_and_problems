@@ -120,6 +120,7 @@ function createGlobalMarkdownTable($tree) {
         "arrays",
         "string",
         "list",
+        "sorting",
     );
     
     // for every value in topics array, print - [value](#value)

@@ -1,6 +1,6 @@
 # Home 
 
-> Total Number of Tasks :        5
+> Total Number of Tasks :        6
 
 > Auto generated ReadMe
 
@@ -8,6 +8,7 @@
 - [Arrays](#Arrays)
 - [String](#String)
 - [List](#List)
+- [Sorting](#Sorting)
 
 ## Bit_manipulation
 
@@ -32,4 +33,10 @@
 | Easy                             |
 |----------------------------------|
 | [Practice Tasks](home/list/easy) |
+
+## Sorting
+
+| Easy                                |
+|-------------------------------------|
+| [Practice Tasks](home/sorting/easy) |
 
