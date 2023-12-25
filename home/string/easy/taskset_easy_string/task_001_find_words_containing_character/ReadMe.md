@@ -19,4 +19,3 @@ Overall Result
 PASS
 ok      find_words_containing_character 0.293s
 ```
-

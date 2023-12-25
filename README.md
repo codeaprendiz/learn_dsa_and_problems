@@ -12,9 +12,9 @@
 
 ## Bit_manipulation
 
-| Easy                                         | Medium                                         |
-|----------------------------------------------|------------------------------------------------|
-| [Practice Tasks](home/bit_manipulation/easy) | [Practice Tasks](home/bit_manipulation/medium) |
+| Easy                                         |
+|----------------------------------------------|
+| [Practice Tasks](home/bit_manipulation/easy) |
 
 ## Arrays
 
@@ -24,9 +24,9 @@
 
 ## String
 
-| Easy                               |
-|------------------------------------|
-| [Practice Tasks](home/string/easy) |
+| Easy                               | Medium                               |
+|------------------------------------|--------------------------------------|
+| [Practice Tasks](home/string/easy) | [Practice Tasks](home/string/medium) |
 
 ## List
 
