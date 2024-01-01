@@ -2,6 +2,20 @@
 
 [leetcode.com » Find words containing a character](https://leetcode.com/problems/find-words-containing-character)
 
+## Solution
+
+```go
+func findWordsContaining(words []string, x byte) []int {
+    var indices []int
+    for i, word := range words {
+        if strings.Contains(word, string(x)) {
+            indices = append(indices, i)
+        }
+    }
+    return indices
+}
+```
+
 ## Setup
 
 ```bash
