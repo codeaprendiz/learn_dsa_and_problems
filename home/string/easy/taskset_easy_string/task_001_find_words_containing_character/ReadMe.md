@@ -38,3 +38,16 @@ Overall Result
 PASS
 ok      find_words_containing_character 0.293s
 ```
+
+## Complexity
+
+The time complexity of the `findWordsContaining` function can be analyzed by considering the operations it performs:
+
+1. **Iterating Over the `words` Array**:
+   - The function iterates over each word in the `words` array. Let's say the length of the array is `n`.
+
+2. **Checking if Each Word Contains the Character `x`**:
+   - For each word, the function checks if it contains the character `x`. This is done using the `strings.Contains` function.
+   - The complexity of `strings.Contains` depends on the length of the word it's checking. In the worst case, it might need to check each character in the word. Let's say the average length of the words in the array is `m`.
+
+Therefore, the overall time complexity of the function is O(n * m), where `n` is the number of words in the `words` array, and `m` is the average length of the words.
