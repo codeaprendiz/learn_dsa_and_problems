@@ -31,6 +31,16 @@ func minStepsToMakeAnagram(s string, t string) int {
 }
 ```
 
+### Why use `rune`?
+
+In Go, a rune represents a Unicode code point. It's essentially an alias for int32, and it's used to handle individual characters in a string, especially when dealing with Unicode characters that may occupy more than one byte.
+
+1. **Unicode Support**: In Go, strings are byte sequences. A `rune` handles Unicode characters, which may be more than one byte, ensuring correct processing of a wide range of text, including non-ASCII characters.
+
+2. **Correct String Iteration**: When iterating over a string with `for...range` in Go, the iteration variable is a `rune`. This approach accurately handles multi-byte Unicode characters, ensuring each character, regardless of its byte size, is processed correctly.
+
+3. **Best Practice**: Using `rune` is recommended in Go for character handling, even for ASCII-only strings, as it makes the code more versatile and robust for different types of text data.
+
 ## Skills
 
 String, Hash Table, Counting
