@@ -93,4 +93,14 @@ Let's perform a dry run of the `minStepsToMakeAnagram` function with the input s
 
 ## Complexity
 
-Time Complexity : O(n)
+**Time Complexity ( O(n) ):**
+
+1. Iterates over each character in strings `s` and `t`, each of length up to \( n \).
+2. Frequency calculation for each string is linear with respect to its length.
+3. Therefore, total time complexity is \( O(n) \), where \( n \) is the length of the longer string.
+
+**Space Complexity ( O(n) ):**
+
+1. Uses two maps for frequency counts, size limited by number of unique characters, leading to a constant auxiliary space of \( O(1) \).
+2. However, including the input size, the space complexity is dependent on the length of strings `s` and `t`.
+3. Combining input and auxiliary space, the total space complexity is \( O(n) \), where \( n \) is the length of the longer string.
