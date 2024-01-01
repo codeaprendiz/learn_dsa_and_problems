@@ -4,6 +4,33 @@
 
 > An Anagram of a string is a string that contains the same characters with a different (or the same) ordering.
 
+## Solution
+
+```go
+func minStepsToMakeAnagram(s string, t string) int {
+   freqS := make(map[rune]int)
+   freqT := make(map[rune]int)
+
+   for _, ch := range s {
+      freqS[ch]++
+   }
+
+   for _, ch := range t {
+      freqT[ch]++
+   }
+
+   steps := 0
+
+   for ch, count := range freqS {
+      if freqT[ch] < count {
+         steps += count - freqT[ch]
+      }
+   }
+
+   return steps
+}
+```
+
 ## Skills
 
 String, Hash Table, Counting
