@@ -5,8 +5,8 @@ import (
 )
 
 func minStepsToMakeAnagram(s string, t string) int {
-	freqS := make(map[rune]int)
-	freqT := make(map[rune]int)
+	freqS := make(map[rune]int) // This line initializes a map named freqS, where each key is of type rune (representing a character in the string s), and each value is an int that counts the frequency of the corresponding character in s.
+	freqT := make(map[rune]int) // So key is of type rune and value is of type int
 
 	for _, ch := range s {
 		freqS[ch]++
