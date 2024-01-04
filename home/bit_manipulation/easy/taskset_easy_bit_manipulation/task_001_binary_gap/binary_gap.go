@@ -8,18 +8,10 @@ import (
 )
 
 func Solution(N int) int {
-	// Convert N to binary string
-	// fmt.Println("Integer received : ", N)
-	// fmt.Println("int64(N) : ", int64(N))
 	currentGap, maxGap := 0, 0
-	// http://golang.org/pkg/strconv/#FormatInt
-	BinaryN := strconv.FormatInt(int64(N), 2)
-	// fmt.Println("BinaryN : ", BinaryN)
+	BinaryN := strconv.FormatInt(int64(N), 2) // http://golang.org/pkg/strconv/#FormatInt
 
-	// fmt.Printf("\n\n")
 	for _, bit := range BinaryN {
-		// fmt.Println("Current bit : ", string(bit))
-		// fmt.Printf("currentGap : %v, maxGap : %v\n", currentGap, maxGap)
 		if bit == '1' {
 			if currentGap > maxGap {
 				maxGap = currentGap

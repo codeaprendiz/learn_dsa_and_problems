@@ -2,11 +2,26 @@
 
 [leetcode.com » BinaryGap](https://leetcode.com/problems/binary-gap/)
 
-- [Binary Gap](#binary-gap)
-  - [Setup](#setup)
-  - [Approach](#approach)
-    - [Why use `binaryN := strconv.FormatInt(int64(N), 2)`](#why-use-binaryn--strconvformatintint64n-2)
-    - [Why us string(bit) to print Binary](#why-us-stringbit-to-print-binary)
+## Solution
+
+```go
+func Solution(N int) int {
+    currentGap, maxGap := 0, 0
+    BinaryN := strconv.FormatInt(int64(N), 2) // http://golang.org/pkg/strconv/#FormatInt
+
+    for _, bit := range BinaryN {
+        if bit == '1' {
+            if currentGap > maxGap {
+                maxGap = currentGap
+            }
+            currentGap = 0
+        } else {
+            currentGap = currentGap + 1
+        }
+    }
+    return maxGap
+}
+```
 
 ## Setup
 
@@ -42,12 +57,13 @@ This function should work efficiently for the given range of integers `[1..2,147
 
 In Go, the `strconv.FormatInt` function requires an argument of type `int64`. If your variable `N` is declared as an `int`, which could be either `int32` or `int64` depending on the system architecture (32-bit or 64-bit), it's good practice to explicitly convert it to `int64` to ensure compatibility with the `FormatInt` function.
 
-This conversion ensures that your program behaves consistently across different platforms, as `int` in Go is architecture dependent:
+This conversion ensures that your program behaves consistently across different platforms, as `int` in Go is architecture dependent.
+An `int` in Go can be 32 or 64 bits depending on the platform (32-bit systems use 32 bits for `int`, and 64-bit systems use 64 bits). To avoid any compatibility issues and to make sure the function works as expected on all platforms, the integer `N` is explicitly converted to `int64`. This conversion ensures that the `strconv.FormatInt` function receives the correctly typed argument regardless of the platform.
 
 - On a 32-bit system, `int` is equivalent to `int32`.
 - On a 64-bit system, `int` is equivalent to `int64`.
 
-By explicitly converting `N` to `int64`, you make sure that the `FormatInt` function receives the correct type regardless of the underlying architecture, thereby making your code more portable. 
+By explicitly converting `N` to `int64`, you make sure that the `FormatInt` function receives the correct type regardless of the underlying architecture, thereby making your code more portable.
 
 If `N` is already an `int64`, then the explicit conversion is not necessary, but it does not harm and makes the code more explicit and possibly clearer.
 
