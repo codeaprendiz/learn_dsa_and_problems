@@ -2,6 +2,8 @@
 
 [leetcode.com » Find words containing a character](https://leetcode.com/problems/find-words-containing-character)
 
+> Revision Count : 1
+
 ## Solution
 
 ```go

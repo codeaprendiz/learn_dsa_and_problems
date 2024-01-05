@@ -2,6 +2,8 @@
 
 [leetcode.com » Concatenation of Array](https://leetcode.com/problems/concatenation-of-array)
 
+> Revision Count : 1
+
 ## Solution
 
 ```bash

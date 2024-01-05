@@ -2,7 +2,9 @@
 
 [leetcode.com » Minimum Number of Steps to Make Two Strings Anagrams](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/description)
 
-> An Anagram of a string is a string that contains the same characters with a different (or the same) ordering.
+> Revision Count : 1
+
+An Anagram of a string is a string that contains the same characters with a different (or the same) ordering.
 
 ## Solution
 

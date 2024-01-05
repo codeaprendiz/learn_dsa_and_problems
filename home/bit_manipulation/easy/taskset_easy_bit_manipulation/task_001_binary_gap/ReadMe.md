@@ -2,6 +2,8 @@
 
 [leetcode.com » BinaryGap](https://leetcode.com/problems/binary-gap/)
 
+> Revision Count : 1
+
 ## Solution
 
 ```go
@@ -71,3 +73,15 @@ If `N` is already an `int64`, then the explicit conversion is not necessary, but
 
 In Go, when you iterate over a string with a range loop, each character (or more precisely, each rune) is represented by its Unicode code point. The Unicode code points for the characters '0' and `1` are 48 and 49, respectively, in decimal. That's why you see 48 when you print a '0' bit and 49 when you print a `1` bit. 
 If you want to print the character itself ('0' or `1`) rather than its Unicode code point, you need to convert the rune back into a character. This can be done simply by using the string() function to convert the rune to a string
+
+## Time And Space Complexity
+
+**Time Complexity Analysis**:
+
+1. The time complexity of the `Solution` function is primarily determined by the loop that iterates over the binary representation of the input integer `N`. The length of this binary representation is proportional to the logarithm of `N`, often denoted as `O(log N)`. This is because the number of digits in a binary representation of a number grows logarithmically with the number itself.
+2. Inside the loop, the operations performed (comparison, assignment) are constant time operations, i.e., their execution time does not depend on the size of the input. Therefore, the overall time complexity of the function is `O(log N)`, where `N` is the value of the input integer.
+
+**Space Complexity Analysis**:
+
+1. The space complexity of the `Solution` function includes both the space used by the input and the auxiliary space used by the function. The input space is the space taken by the integer `N`, which is a constant and typically does not count towards space complexity. The most significant contributor to space complexity here is the binary string `BinaryN`, whose length is proportional to `O(log N)`.
+2. Other variables used in the function, such as `currentGap` and `maxGap`, require a constant amount of space. Therefore, these do not significantly impact the overall space complexity. As a result, the total space complexity of the function is dominated by the length of the binary string, leading to a space complexity of `O(log N)`. This reflects the space needed to store the binary representation of `N`.
