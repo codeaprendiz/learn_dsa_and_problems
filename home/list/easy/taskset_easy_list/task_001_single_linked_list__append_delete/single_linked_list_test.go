@@ -102,6 +102,49 @@ func TestAppendLinkedList(t *testing.T) {
 	fmt.Printf("\nOverall Result\n")
 }
 
+// TestPrependLinkedList checks if elements are correctly prepended to the list
+func TestPrependLinkedList(t *testing.T) {
+	testCases := []struct {
+		name     string
+		inputs   []int
+		expected []int
+	}{
+		{
+			name:     "Prepend 1",
+			inputs:   []int{1},
+			expected: []int{1},
+		},
+		{
+			name:     "Prepend 2, 1",
+			inputs:   []int{2, 1},
+			expected: []int{1, 2},
+		},
+		{
+			name:     "Prepend 3, 2, 1",
+			inputs:   []int{3, 2, 1},
+			expected: []int{1, 2, 3},
+		},
+	}
+
+	for _, tc := range testCases {
+		ll := LinkedList{} // Create a new LinkedList for each test case
+		for _, input := range tc.inputs {
+			ll.prependToList(input) // Prepend each element in the inputs slice
+		}
+
+		result := linkedListToSlice(ll)
+		fmt.Printf("\nList status : ")
+		ll.displayList()
+		fmt.Printf("      %s - Inputs: %v, Expected: %v, Result: %v", tc.name, tc.inputs, tc.expected, result)
+		if !reflect.DeepEqual(result, tc.expected) {
+			t.Errorf("\n\nTest failed for %s - got %v; want %v", tc.name, result, tc.expected)
+		} else {
+			fmt.Printf("    --------- Pass")
+		}
+	}
+	fmt.Printf("\nOverall Result\n")
+}
+
 // Helper function to convert linked list to a slice
 func linkedListToSlice(ll LinkedList) []int {
 	var slice []int

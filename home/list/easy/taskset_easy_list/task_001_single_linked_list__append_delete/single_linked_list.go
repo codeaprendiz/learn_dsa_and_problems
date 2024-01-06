@@ -15,6 +15,7 @@ type LinkedList struct {
 	head *Node // LinkedList is a struct that just contains a pointer to the first Node
 }
 
+// Insert at the end
 func (ll *LinkedList) appendToList(data int) {
 
 	newNode := &Node{val: data, next: nil} // newNode contains the address of the first Node
@@ -33,6 +34,19 @@ func (ll *LinkedList) appendToList(data int) {
 	cur.next = newNode
 }
 
+// Insert at the begining of list
+func (ll *LinkedList) prependToList(data int) {
+	newNode := &Node{val: data, next: nil} // Create a new Node
+
+	if ll.head == nil { // If the list is empty, make the new node the head
+		ll.head = newNode
+	} else { // If the list is not empty
+		newNode.next = ll.head // Point the new node's 'next' to the current head
+		ll.head = newNode      // Update the head of the list to the new node
+	}
+}
+
+// Delete from list the value data, it can be at multiple places in the list
 func (ll *LinkedList) deleteFromList(data int) {
 	cur := ll.head.next // Pointer to the second Node if exists
 	prev := ll.head     // Pointer to the first Node if exists
@@ -50,7 +64,7 @@ func (ll *LinkedList) deleteFromList(data int) {
 
 		if cur.val == data {
 			prev.next = cur.next // Delete the current node
-			cur = cur.next       // Advance cur to the next node
+			cur = cur.next       // Advance cur to the next node, we do not return because data can be at multiple places
 		} else {
 			prev = cur
 			cur = cur.next
@@ -58,7 +72,7 @@ func (ll *LinkedList) deleteFromList(data int) {
 	}
 }
 
-// Function to be used in main
+// Function to print list with each Node details in separate lines
 func (ll *LinkedList) printList() {
 	cur := ll.head
 
@@ -70,7 +84,7 @@ func (ll *LinkedList) printList() {
 	}
 }
 
-// The function can be used in testing to get required output
+// Function to print the list details in one line
 func (ll *LinkedList) displayList() {
 	current := ll.head
 	for current != nil {

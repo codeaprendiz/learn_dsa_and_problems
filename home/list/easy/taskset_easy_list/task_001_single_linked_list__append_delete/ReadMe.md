@@ -271,3 +271,78 @@ LinkedList
 ```
 
 - `Node 2` successfully deleted.
+
+## Insert at the front of a list
+
+```go
+// Insert at the begining of list
+func (ll *LinkedList) prependToList(data int) {
+    newNode := &Node{val: data, next: nil} // Create a new Node
+
+    if ll.head == nil { // If the list is empty, make the new node the head
+        ll.head = newNode
+    } else { // If the list is not empty
+        newNode.next = ll.head // Point the new node's 'next' to the current head
+        ll.head = newNode      // Update the head of the list to the new node
+    }
+}
+```
+
+Let's create a graphical representation for the `prependToList` function, similar to how we illustrated the deletion process, but this time focusing on the insertion at the beginning of the list.
+
+**Initial LinkedList:**
+
+```bash
+LinkedList
++-------+
+| head  |----->+-------+      +-------+
+|       |      | val:1 |      | val:2 |
++-------+      | next  |----->| next  |-----> nil
+               +-------+      +-------+
+```
+
+**Step 1: Create a New Node (e.g., with `val: X`)**
+
+```bash
+New Node
++--------+
+| val:X  | 
+| next   |-----> nil
++--------+
+```
+
+**Step 2: Point New Node's Next to Current Head**
+
+```bash
+New Node
++--------+
+| val:X  | 
+| next   |----->+-------+      +-------+
++--------+      | val:1 |      | val:2 |
+                | next  |----->| next  |-----> nil
+                +-------+      +-------+
+```
+
+**Step 3: Update Head to Point to New Node**
+
+```bash
+LinkedList
++-------+
+| head  |----->+--------+     +-------+      +-------+
+|       |      | val:X  |     | val:1 |      | val:2 |
++-------+      | next   |---->| next  |----->| next  |-----> nil
+               +--------+     +-------+      +-------+
+```
+
+**Final LinkedList:**
+
+```bash
+LinkedList
++-------+
+| head  |----->+--------+     +-------+      +-------+
+|       |      | val:X  |     | val:1 |      | val:2 |
++-------+      | next   |---->| next  |----->| next  |-----> nil
+               +--------+     +-------+      +-------+
+```
+
+- The new node (`val: X`) is now the first node in the list, with its `next` pointing to the former first node (`val: 1`). The `head` of the list now points to the new node.
