@@ -272,7 +272,7 @@ LinkedList
 
 - `Node 2` successfully deleted.
 
-## Insert at the front of a list
+## Insert at the front of a list, Prepend to a list
 
 ```go
 // Insert at the begining of list
