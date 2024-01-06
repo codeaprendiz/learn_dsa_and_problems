@@ -46,7 +46,7 @@ func TestDeleteLinkedList(t *testing.T) {
 	// Execute test cases
 	for _, tc := range testCases {
 		fmt.Printf("\nList status : ")
-		ll.displayList()
+		ll.printList()
 		ll.deleteFromList(tc.toDelete)
 		result := linkedListToSlice(ll)
 		fmt.Printf("          %s - Delete: %v, Expected: %v, Result: %v", tc.name, tc.toDelete, tc.expected, result)
