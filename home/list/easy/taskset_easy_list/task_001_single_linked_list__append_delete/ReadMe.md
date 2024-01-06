@@ -23,3 +23,251 @@ Overall Result
 PASS
 ok      single_linked_list      1.124s
 ```
+
+## Node
+
+```go
+
+type Node struct {
+    val  int   // This is the value that Node contains
+    next *Node // This is the pointer to the next node
+}
+```
+
+```bash
+Node
++-------+
+| val: X |   // 'X' represents the value stored in the node
+| next  |-----> [Address of Next Node / nil]
++-------+
+```
+
+## LinkedList
+
+```go
+type LinkedList struct {
+    head *Node // LinkedList is a struct that just contains a pointer to the first Node
+}
+```
+
+```bash
+# Empty LinkedList
+LinkedList
++-------+
+| head  |-----> [Address of First Node / nil]
++-------+
+
+# LinkedList with two nodes
+LinkedList
++-------+
+| head  |----->+-------+      +-------+
+|       |      | val:1 |      | val:2 |
++-------+      | next  |----->| next  |-----> nil
+               +-------+      +-------+
+                  ^              ^
+                  |              |
+                Node 1         Node 2
+```
+
+## Appending to a list (Adding node to the end of list)
+
+```go
+func (ll *LinkedList) appendToList(data int) {
+
+    newNode := &Node{val: data, next: nil} // newNode contains the address of the first Node
+
+    if ll.head == nil { // if Pointer to the first Node is nil i.e. if head is nil
+        ll.head = newNode
+        return
+    }
+
+    cur := ll.head // cur has pointer to the first Node and it is definately not nil yet
+
+    for cur.next != nil { // since head was not nil, now traverse until you find nil
+        cur = cur.next
+    }
+
+    cur.next = newNode
+}
+```
+
+Certainly! Let's visually represent the steps of appending a node to a linked list using your `appendToList` function. We'll use references to `cur` and `newNode` in the graphical representation.
+
+**Initial LinkedList:**
+
+```bash
+LinkedList
++-------+
+| head  |----->+-------+      +-------+
+|       |      | val:1 |      | val:2 |
++-------+      | next  |----->| next  |-----> nil
+               +-------+      +-------+
+                  ^              ^
+                  |              |
+                 cur           cur.next
+```
+
+- `cur` initially points to `Node 1`.
+
+**Step 1: Create a New Node**
+
+```bash
+New Node
++-------+
+| val:X |   // 'X' is the new value
+| next  |-----> nil
++-------+
+```
+
+- A new node with `val: X` is created.
+
+**Step 2: Traverse to the End of the List**
+
+- Since `ll.head` is not `nil`, traverse the list using `cur` to find the last node.
+
+**Step 3: `cur` Reaches Last Node**
+
+```bash
+LinkedList
++-------+
+| head  |----->+-------+      +-------+
+|       |      | val:1 |      | val:2 |
++-------+      | next  |----->| next  |-----> nil
+               +-------+      +-------+
+                                 ^
+                                 |
+                                cur
+```
+
+- `cur` is now at the last node (`Node 2`).
+
+**Step 4: Append New Node at the End**
+
+```bash
+LinkedList
++-------+
+| head  |----->+-------+      +-------+      +-------+
+|       |      | val:1 |      | val:2 |      | val:X |
++-------+      | next  |----->| next  |----->| next  |-----> nil
+               +-------+      +-------+      +-------+
+                                 ^              ^
+                                 |              |
+                                cur          newNode
+```
+
+- `cur.next` is set to `newNode`, adding it to the end of the list.
+
+**Final LinkedList:**
+
+```bash
+LinkedList
++-------+
+| head  |----->+-------+      +-------+      +-------+
+|       |      | val:1 |      | val:2 |      | val:X |
++-------+      | next  |----->| next  |----->| next  |-----> nil
+               +-------+      +-------+      +-------+
+```
+
+- The new node is successfully appended to the end of the list.
+
+## Deleting a Node from a list
+
+```go
+func (ll *LinkedList) deleteFromList(data int) {
+    cur := ll.head.next // Pointer to the second Node if exists
+    prev := ll.head     // Pointer to the first Node if exists
+
+    if prev == nil { // if head is nil
+        return
+    }
+
+    if prev.val == data {
+        ll.head = cur // if the value is present at first Node, then point head to second node
+        return
+    }
+
+    for cur != nil {
+
+        if cur.val == data {
+            prev.next = cur.next // Delete the current node
+            cur = cur.next       // Advance cur to the next node
+        } else {
+            prev = cur
+            cur = cur.next
+        }
+    }
+}
+```
+
+Let's break down the node deletion process into steps with a purely graphical representation, including references to `cur`, `cur.next`, `prev`, and `prev.next`.
+
+**Initial LinkedList:**
+
+```bash
+LinkedList
++-------+
+| head  |----->+-------+      +-------+      +-------+
+|       |      | val:1 |      | val:2 |      | val:3 |
++-------+      | next  |----->| next  |----->| next  |-----> nil
+               +-------+      +-------+      +-------+
+                  ^              ^              ^
+                  |              |              |
+                prev            cur           cur.next
+```
+
+**Step 1: Check `cur.val` Against `data`**
+
+- `prev` at `Node 1`, `cur` at `Node 2`.
+
+**Step 2: `cur.val` Matches `data`**
+
+- `cur.val` is `2`, matches `data`.
+
+**Step 3: Delete `Node 2` by Updating Pointers**
+
+```bash
+LinkedList
++-------+
+| head  |----->+-------+      +-------+
+|       |      | val:1 |      | val:3 |
++-------+      | next  |----->| next  |-----> nil
+               +-------+      +-------+
+                  ^              ^
+                  |              |
+                prev           cur.next
+```
+
+- Set `prev.next` to `cur.next`.
+
+**Step 4: Advance `cur`**
+
+```bash
+LinkedList
++-------+
+| head  |----->+-------+      +-------+
+|       |      | val:1 |      | val:3 |
++-------+      | next  |----->| next  |-----> nil
+               +-------+      +-------+
+                  ^              ^
+                  |              |
+                prev            cur
+```
+
+- Move `cur` to `cur.next` (now at `Node 3`).
+
+**Step 5: Continue Loop Until `cur` is `nil`**
+
+- No more matching nodes; loop concludes.
+
+**Final LinkedList:**
+
+```bash
+LinkedList
++-------+
+| head  |----->+-------+      +-------+
+|       |      | val:1 |      | val:3 |
++-------+      | next  |----->| next  |-----> nil
+               +-------+      +-------+
+```
+
+- `Node 2` successfully deleted.

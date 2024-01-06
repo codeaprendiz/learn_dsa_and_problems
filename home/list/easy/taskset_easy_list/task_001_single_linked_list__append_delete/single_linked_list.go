@@ -1,6 +1,6 @@
-package main
+// package main
 
-// package single_linked_list
+package single_linked_list
 
 import (
 	"fmt"
@@ -58,6 +58,7 @@ func (ll *LinkedList) deleteFromList(data int) {
 	}
 }
 
+// Function to be used in main
 func (ll *LinkedList) printList() {
 	cur := ll.head
 
@@ -66,6 +67,15 @@ func (ll *LinkedList) printList() {
 		fmt.Println("val  : ", cur.val)
 		fmt.Println("next : ", cur.next)
 		cur = cur.next
+	}
+}
+
+// The function can be used in testing to get required output
+func (ll *LinkedList) displayList() {
+	current := ll.head
+	for current != nil {
+		fmt.Printf("%v ", current.val)
+		current = current.next
 	}
 }
 
