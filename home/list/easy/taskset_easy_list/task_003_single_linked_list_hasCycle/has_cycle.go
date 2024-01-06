@@ -46,6 +46,16 @@ func (ll *LinkedList) hasCycle() bool {
 	return false
 }
 
+// Function to print the list details in one line
+func (ll *LinkedList) displayList() {
+	current := ll.head
+	for current != nil {
+		fmt.Printf("%v ", current.val)
+		current = current.next
+	}
+	fmt.Println()
+}
+
 func main() {
 	ll := LinkedList{}
 

@@ -37,6 +37,10 @@ func TestHasCycle(t *testing.T) {
 			ll.appendToList(input)
 		}
 
+		// Print the list before making a cycle
+		fmt.Printf("\nList before making a cycle (%s): ", tc.name)
+		ll.displayList()
+
 		// Create a cycle if required
 		if tc.makeCycle {
 			// Creating a cycle: Pointing the next of the last node to the head
