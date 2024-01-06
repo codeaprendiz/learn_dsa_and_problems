@@ -43,6 +43,7 @@ func TestDeleteLinkedList(t *testing.T) {
 		},
 	}
 
+	fmt.Println("\n\n-------------- Test Deletion From a LinkedList ----------------------------")
 	// Execute test cases
 	for _, tc := range testCases {
 		fmt.Printf("\nList status : ")
@@ -82,6 +83,8 @@ func TestAppendLinkedList(t *testing.T) {
 			expected: []int{1, 2, 3},
 		},
 	}
+
+	fmt.Println("\n\n-------------- Test Appending To a LinkedList ----------------------------")
 
 	for _, tc := range testCases {
 		ll := LinkedList{} // Create a new LinkedList for each test case
@@ -126,6 +129,8 @@ func TestPrependLinkedList(t *testing.T) {
 		},
 	}
 
+	fmt.Println("\n\n-------------- Test Prepending To a LinkedList ----------------------------")
+
 	for _, tc := range testCases {
 		ll := LinkedList{} // Create a new LinkedList for each test case
 		for _, input := range tc.inputs {
@@ -142,7 +147,7 @@ func TestPrependLinkedList(t *testing.T) {
 			fmt.Printf("    --------- Pass")
 		}
 	}
-	fmt.Printf("\nOverall Result\n")
+	fmt.Printf("\n\n\nOverall Result\n")
 }
 
 // Helper function to convert linked list to a slice
