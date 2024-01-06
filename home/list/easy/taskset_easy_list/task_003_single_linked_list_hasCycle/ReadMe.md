@@ -28,6 +28,24 @@ ok      has_cycle       0.978s
 
 ## has cycle
 
+```go
+func (ll *LinkedList) hasCycle() bool {
+    slow := ll.head
+    fast := ll.head
+
+    for slow != nil && fast != nil && fast.next != nil {
+        slow = slow.next
+        fast = fast.next.next
+
+        if slow == fast {
+            return true
+        }
+    }
+
+    return false
+}
+```
+
 **Initial LinkedList (No Cycle):**
 
 ```bash
