@@ -1,5 +1,7 @@
 # Has Cycle
 
+[leetcode.com » Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)
+
 ## Run
 
 ```bash
@@ -34,7 +36,7 @@ func (ll *LinkedList) hasCycle() bool {
     fast := ll.head
 
     for slow != nil && fast != nil && fast.next != nil {
-        slow = slow.next
+        slow = slow.next        // this has to come before slow == fast condition, otherwise both are at head and you return true
         fast = fast.next.next
 
         if slow == fast {
@@ -105,3 +107,25 @@ LinkedList
 
 - If `slow == fast` at any point, `hasCycle` returns `true`, indicating the presence of a cycle.
 - If `fast` reaches the end of the list (`nil`), `hasCycle` returns `false`, indicating no cycle.
+
+## Time And Space Complexity
+
+let's analyze the `hasCycle` function in terms of its Time Complexity, Auxiliary Space Complexity, and Space Complexity:
+
+1. **Time Complexity:**
+   - The `hasCycle` function uses a for loop that runs as long as both `slow` and `fast` pointers do not encounter the end of the list (`nil`).
+   - In the worst case (no cycle), `fast` will reach the end of the list in `O(n/2)` iterations, where `n` is the number of nodes. This simplifies to `O(n)`.
+   - In the presence of a cycle, the loop will terminate earlier when `slow` and `fast` meet, but this will still happen in a number of steps proportional to `n`.
+   - Thus, the Time Complexity of `hasCycle` is `O(n)`.
+
+2. **Auxiliary Space Complexity:**
+   - The function only uses two pointers (`slow` and `fast`), regardless of the size of the linked list.
+   - No other additional data structures or recursive calls that grow with the size of the input are used.
+   - Therefore, the Auxiliary Space Complexity is `O(1)`, as the space used is constant and does not scale with the input size.
+
+3. **Space Complexity:**
+   - Space Complexity includes both the space used by the input and the auxiliary space used by the algorithm.
+   - Since the linked list itself is the input and the function does not modify or copy it, and the auxiliary space is constant, the overall Space Complexity is also `O(1)`.
+   - The constant space for the two pointers is the only additional space used.
+
+In summary, the `hasCycle` function is efficient in terms of both time and space, with a linear Time Complexity (`O(n)`) and constant Space Complexity (`O(1)`), making it well-suited for large linked lists.
