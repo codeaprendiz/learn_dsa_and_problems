@@ -91,7 +91,7 @@ func (ll *LinkedList) appendToList(data int) {
 }
 ```
 
-Certainly! Let's visually represent the steps of appending a node to a linked list using your `appendToList` function. We'll use references to `cur` and `newNode` in the graphical representation.
+Let's visually represent the steps of appending a node to a linked list using your `appendToList` function. We'll use references to `cur` and `newNode` in the graphical representation.
 
 **Initial LinkedList:**
 
