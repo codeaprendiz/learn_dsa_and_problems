@@ -12,7 +12,6 @@ type Node struct {
 
 type LinkedList struct {
 	head *Node // This is the pointer to the first Node
-	tail *Node // This is the pointer to the last Node
 }
 
 func (ll *LinkedList) appendNodeToListWithData(data int) {
@@ -20,7 +19,6 @@ func (ll *LinkedList) appendNodeToListWithData(data int) {
 
 	if ll.head == nil {
 		ll.head = newNode
-		ll.tail = newNode
 		return
 	}
 
@@ -33,9 +31,6 @@ func (ll *LinkedList) appendNodeToListWithData(data int) {
 	// Link the new node
 	cur.next = newNode
 	newNode.prev = cur
-
-	// Update the tail of the list
-	ll.tail = newNode
 }
 
 // To delete from the linkedlist
@@ -69,6 +64,20 @@ func (ll *LinkedList) deleteNodeFromListWithData(data int) {
 	if cur.prev != nil {
 		cur.prev.next = cur.next
 	}
+}
+
+// Prepend function, to add at the begining of the list
+func (ll *LinkedList) prependNodeToListWithData(data int) {
+	newNode := &Node{val: data, prev: nil, next: nil}
+
+	if ll.head == nil {
+		ll.head = newNode
+		return
+	}
+
+	newNode.next = ll.head
+	ll.
+
 }
 
 // To display list in one line

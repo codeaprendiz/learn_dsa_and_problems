@@ -53,7 +53,6 @@ func (ll *LinkedList) appendToList(data int) {
 
     if ll.head == nil {
         ll.head = newNode
-        ll.tail = newNode
         return
     }
 
@@ -66,9 +65,6 @@ func (ll *LinkedList) appendToList(data int) {
     // Link the new node
     cur.next = newNode
     newNode.prev = cur
-
-    // Update the tail of the list
-    ll.tail = newNode
 }
 ```
 
@@ -137,7 +133,7 @@ Doubly LinkedList
                +-------+      +-------+      +-------+
                                  ^              ^
                                  |              |
-                                cur          newNode / tail
+                                cur          newNode
 ```
 
 - `cur.next` is set to `newNode`, adding it to the end of the list.
@@ -153,9 +149,6 @@ Doubly LinkedList
 +-------+      | next  |----->| next  |----->| next  |-----> nil
                | prev  |<-----| prev  |<-----| prev  |
                +-------+      +-------+      +-------+
-                                                 ^
-                                                 |
-                                                tail
 ```
 
 - The new node (`val: X`) is successfully appended to the end of the list, with proper `prev` and `next` pointers maintaining the doubly linked structure.
