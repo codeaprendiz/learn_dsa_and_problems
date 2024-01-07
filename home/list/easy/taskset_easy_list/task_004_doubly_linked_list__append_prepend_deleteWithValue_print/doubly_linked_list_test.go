@@ -6,8 +6,21 @@ import (
 	"testing"
 )
 
+// Helper function to convert doubly linked list to a slice (forward traversal)
+func linkedListToSlice(ll LinkedList) []int {
+	var slice []int
+	current := ll.head
+	for current != nil {
+		slice = append(slice, current.val)
+		current = current.next
+	}
+	return slice
+}
+
 // TestAppendToListDoublyLinkedList checks if elements are correctly appended to the doubly linked list
 func TestAppendToListDoublyLinkedList(t *testing.T) {
+	fmt.Println("\n\n-------------- Test Appending To a Doubly LinkedList ----------------------------")
+
 	testCases := []struct {
 		name     string
 		inputs   []int
@@ -33,24 +46,19 @@ func TestAppendToListDoublyLinkedList(t *testing.T) {
 			ll.appendToList(input)
 		}
 
+		// Print the list status before and after appending
+		fmt.Printf("List status : ")
+		ll.displayList()
+
 		// Convert the list to a slice and compare with the expected result
 		result := linkedListToSlice(ll)
-		fmt.Printf("Test '%s':\n", tc.name)
-		fmt.Printf("    Expected: %v\n", tc.expected)
-		fmt.Printf("    Result:   %v\n", result)
+		fmt.Printf("      %s - Inputs: %v, Expected: %v, Result: %v", tc.name, tc.inputs, tc.expected, result)
 		if !reflect.DeepEqual(result, tc.expected) {
-			t.Errorf("Test '%s' failed: expected %v, got %v", tc.name, tc.expected, result)
+			t.Errorf("\n\nTest failed for %s - got %v; want %v", tc.name, result, tc.expected)
+		} else {
+			fmt.Printf("    --------- Pass")
 		}
+		fmt.Printf("\n")
 	}
-}
-
-// Helper function to convert doubly linked list to a slice (forward traversal)
-func linkedListToSlice(ll LinkedList) []int {
-	var slice []int
-	current := ll.head
-	for current != nil {
-		slice = append(slice, current.val)
-		current = current.next
-	}
-	return slice
+	fmt.Printf("\nOverall Result\n")
 }

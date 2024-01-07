@@ -8,7 +8,19 @@ go: creating new go.mod: module doubly_linked_list
 go: to add module requirements and sums:
         go mod tidy
 
+$ go test
 
+
+-------------- Test Appending To a Doubly LinkedList ----------------------------
+List status :  1       Append single element - Inputs: [1], Expected: [1], Result: [1]    --------- Pass
+List status :  1  2  3       Append multiple elements - Inputs: [1 2 3], Expected: [1 2 3], Result: [1 2 3]    --------- Pass
+
+Overall Result
+PASS
+ok      doubly_linked_list      0.648s
+
+$ go run doubly_linked_list.go
+ 1  2  3
 ```
 
 ## Insert At The End of the List
