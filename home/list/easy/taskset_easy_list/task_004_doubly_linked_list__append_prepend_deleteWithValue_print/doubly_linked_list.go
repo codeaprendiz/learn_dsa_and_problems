@@ -79,7 +79,7 @@ func (ll *LinkedList) displayList() {
 		fmt.Printf(" %v ", cur.val)
 		cur = cur.next
 	}
-	fmt.Printf("\n")
+	fmt.Print("\n")
 }
 
 func main() {

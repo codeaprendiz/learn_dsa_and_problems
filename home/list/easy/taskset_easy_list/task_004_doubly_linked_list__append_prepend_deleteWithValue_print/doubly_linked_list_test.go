@@ -17,6 +17,69 @@ func linkedListToSlice(ll LinkedList) []int {
 	return slice
 }
 
+// TestDeleteNodeFromListWithData checks if nodes are correctly deleted from the doubly linked list
+func TestDeleteNodeFromListWithData(t *testing.T) {
+	fmt.Println("\n\n-------------- Test Deletion From a Doubly LinkedList ----------------------------")
+
+	testCases := []struct {
+		name           string
+		initialInputs  []int
+		deleteValue    int
+		expectedValues []int // Expected values in order after deletion
+	}{
+		{
+			name:           "Delete from middle of list",
+			initialInputs:  []int{1, 2, 3, 4},
+			deleteValue:    3,
+			expectedValues: []int{1, 2, 4},
+		},
+		{
+			name:           "Delete head of list",
+			initialInputs:  []int{1, 2, 3, 4},
+			deleteValue:    1,
+			expectedValues: []int{2, 3, 4},
+		},
+		{
+			name:           "Delete tail of list",
+			initialInputs:  []int{1, 2, 3, 4},
+			deleteValue:    4,
+			expectedValues: []int{1, 2, 3},
+		},
+		{
+			name:           "Delete non-existent value",
+			initialInputs:  []int{1, 2, 3, 4},
+			deleteValue:    5,
+			expectedValues: []int{1, 2, 3, 4},
+		},
+	}
+
+	for _, tc := range testCases {
+		ll := LinkedList{}
+
+		// Populate the list
+		for _, val := range tc.initialInputs {
+			ll.appendNodeToListWithData(val)
+		}
+
+		// Print the list status before deletion
+		ll.displayList()
+
+		// Delete the node
+		ll.deleteNodeFromListWithData(tc.deleteValue)
+
+		// Convert list to a slice for comparison
+		result := linkedListToSlice(ll)
+		fmt.Printf("%s - Delete: %v, Expected: %v, Result: %v", tc.name, tc.deleteValue, tc.expectedValues, result)
+		if !reflect.DeepEqual(result, tc.expectedValues) {
+			t.Errorf("\n\nTest failed for %s - expected %v, got %v", tc.name, tc.expectedValues, result)
+		} else {
+			fmt.Printf("    --------- Pass")
+		}
+		fmt.Printf("\n")
+	}
+	fmt.Printf("\nOverall Result\n")
+}
+
 // TestAppendToListWithDataDoublyLinkedList checks if elements are correctly appended to the doubly linked list
 func TestAppendToListWithDataDoublyLinkedList(t *testing.T) {
 	fmt.Println("\n\n-------------- Test Appending To a Doubly LinkedList ----------------------------")
@@ -41,18 +104,18 @@ func TestAppendToListWithDataDoublyLinkedList(t *testing.T) {
 	for _, tc := range testCases {
 		ll := LinkedList{} // Create a new LinkedList for each test case
 
+		// Print the list status before and after appending
+		fmt.Printf("Before Appending...")
+		ll.displayList()
+
 		// Append elements to the list
 		for _, input := range tc.inputs {
 			ll.appendNodeToListWithData(input)
 		}
 
-		// Print the list status before and after appending
-		fmt.Printf("List status : ")
-		ll.displayList()
-
 		// Convert the list to a slice and compare with the expected result
 		result := linkedListToSlice(ll)
-		fmt.Printf("      %s - Inputs: %v, Expected: %v, Result: %v", tc.name, tc.inputs, tc.expected, result)
+		fmt.Printf("%s - Inputs: %v, Expected: %v, Result: %v", tc.name, tc.inputs, tc.expected, result)
 		if !reflect.DeepEqual(result, tc.expected) {
 			t.Errorf("\n\nTest failed for %s - got %v; want %v", tc.name, result, tc.expected)
 		} else {
