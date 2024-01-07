@@ -15,7 +15,7 @@ type LinkedList struct {
 	tail *Node // This is the pointer to the last Node
 }
 
-func (ll *LinkedList) appendToList(data int) {
+func (ll *LinkedList) appendNodeToListWithData(data int) {
 	newNode := &Node{val: data, prev: nil, next: nil}
 
 	if ll.head == nil {
@@ -38,6 +38,11 @@ func (ll *LinkedList) appendToList(data int) {
 	ll.tail = newNode
 }
 
+// To delete from the linkedlist
+func (ll *LinkedList) deleteNodeFromListWithData(data int) {
+
+}
+
 // To display list in one line
 func (ll *LinkedList) displayList() {
 	cur := ll.head
@@ -49,8 +54,8 @@ func (ll *LinkedList) displayList() {
 
 func main() {
 	ll := LinkedList{head: nil, tail: nil}
-	ll.appendToList(1)
-	ll.appendToList(2)
-	ll.appendToList(3)
+	ll.appendNodeToListWithData(1)
+	ll.appendNodeToListWithData(2)
+	ll.appendNodeToListWithData(3)
 	ll.displayList()
 }

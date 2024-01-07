@@ -17,8 +17,8 @@ func linkedListToSlice(ll LinkedList) []int {
 	return slice
 }
 
-// TestAppendToListDoublyLinkedList checks if elements are correctly appended to the doubly linked list
-func TestAppendToListDoublyLinkedList(t *testing.T) {
+// TestAppendToListWithDataDoublyLinkedList checks if elements are correctly appended to the doubly linked list
+func TestAppendToListWithDataDoublyLinkedList(t *testing.T) {
 	fmt.Println("\n\n-------------- Test Appending To a Doubly LinkedList ----------------------------")
 
 	testCases := []struct {
@@ -43,7 +43,7 @@ func TestAppendToListDoublyLinkedList(t *testing.T) {
 
 		// Append elements to the list
 		for _, input := range tc.inputs {
-			ll.appendToList(input)
+			ll.appendNodeToListWithData(input)
 		}
 
 		// Print the list status before and after appending
