@@ -137,3 +137,107 @@ Doubly LinkedList
 ```
 
 - The new node (`val: X`) is successfully appended to the end of the list, with proper `prev` and `next` pointers maintaining the doubly linked structure.
+
+## DeleteNode
+
+```go
+// To delete from the linkedlist
+func (ll *LinkedList) deleteNodeFromListWithData(data int) {
+    if ll.head == nil { // If the first Node is null
+        return
+    }
+
+    if ll.head.val == data {
+        ll.head = ll.head.next // head now points to the second Node, we have to delete the first Node
+        if ll.head != nil {    // what is the second node is Nil
+            ll.head.prev = nil // second node's prev pointer is no longer pointing to firstNode as it's deleted
+        }
+    }
+
+    // Find the node to delete
+    cur := ll.head
+    for cur != nil && cur.val != data {
+        cur = cur.next
+    }
+
+    // If node was not found
+    if cur == nil {
+        return
+    }
+
+    // Update the pointer to exclude the current node
+    if cur.next != nil {
+        cur.next.prev = cur.prev
+    }
+    if cur.prev != nil {
+        cur.prev.next = cur.next
+    }
+}
+```
+
+You're correct. Let's revise the visualization to correctly depict the deletion of the node with `val:2` from a doubly linked list. We'll ensure that `cur` correctly points to the node being deleted and show the subsequent adjustments to the `prev` and `next` pointers of adjacent nodes.
+
+**Initial Doubly LinkedList:**
+
+```bash
+Doubly LinkedList
++-------+
+| head  |----->+-------+      +-------+      +-------+
+|       |      | val:1 |      | val:2 |      | val:3 |
++-------+      | next  |----->| next  |----->| next  |-----> nil
+               | prev  |<-----| prev  |<-----| prev  |
+               +-------+      +-------+      +-------+
+```
+
+- The list contains three nodes, and we aim to delete the node with `val:2`.
+
+**Step 1: Traverse to Find the Node (`val:2`)**
+
+- Traverse the list using `cur` to find the node with `val:2`.
+
+```bash
+Traversal
+Doubly LinkedList
++-------+
+| head  |----->+-------+      +-------+      +-------+
+|       |      | val:1 |      | val:2 |      | val:3 |
++-------+      | next  |----->| next  |----->| next  |-----> nil
+               | prev  |<-----| prev  |<-----| prev  |
+               +-------+      +-------+      +-------+
+                                 ^
+                                 |
+                                cur
+```
+
+- `cur` points to the node with `val:2`.
+
+**Step 2: Delete the Node (`val:2`)**
+
+- Update `cur.next.prev` to `cur.prev` (link `val:3`'s `prev` to `val:1`).
+- Update `cur.prev.next` to `cur.next` (link `val:1`'s `next` to `val:3`).
+
+```bash
+After Deletion
++-------+      +-------+      +-------+
+| head  |----->| val:1 |----->| val:3 |-----> nil
+|       |      | next  |      | next  |
++-------+      | prev  |<-----| prev  |
+               +-------+      +-------+
+```
+
+- The node with `val:2` has been successfully deleted.
+- The `prev` and `next` pointers of `val:1` and `val:3` are updated to exclude `val:2`.
+
+**Final Doubly LinkedList (After Deletion of `val:2`):**
+
+```bash
+Doubly LinkedList
++-------+
+| head  |----->+-------+      +-------+
+|       |      | val:1 |      | val:3 |
++-------+      | next  |----->| next  |-----> nil
+               | prev  |<-----| prev  |
+               +-------+      +-------+
+```
+
+- The list now correctly reflects the removal of `val:2`, with adjacent nodes `val:1` and `val:3` linked directly to each other.
