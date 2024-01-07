@@ -125,3 +125,50 @@ func TestAppendToListWithDataDoublyLinkedList(t *testing.T) {
 	}
 	fmt.Printf("\nOverall Result\n")
 }
+
+// TestPrependToListDoublyLinkedList checks if elements are correctly prepended to the doubly linked list
+// TestPrependToListDoublyLinkedList checks if elements are correctly prepended to the doubly linked list
+func TestPrependToListDoublyLinkedList(t *testing.T) {
+	fmt.Println("\n\n-------------- Test Prepending To a Doubly LinkedList ----------------------------")
+
+	testCases := []struct {
+		name     string
+		inputs   []int
+		expected []int // Expected values in order after appending
+	}{
+		{
+			name:     "Prepend single element",
+			inputs:   []int{1},
+			expected: []int{1},
+		},
+		{
+			name:     "Prepend multiple elements",
+			inputs:   []int{3, 2, 1},
+			expected: []int{1, 2, 3},
+		},
+	}
+
+	for _, tc := range testCases {
+		ll := LinkedList{}
+
+		// Print the list status before appending
+		fmt.Println("\nBefore Prepending...")
+		ll.displayList()
+
+		// Append elements to the list
+		for _, input := range tc.inputs {
+			ll.prependNodeToListWithData(input)
+		}
+
+		// Convert list to a slice for comparison
+		result := linkedListToSlice(ll)
+		fmt.Printf("%s - Inputs: %v, Expected: %v, Result: %v", tc.name, tc.inputs, tc.expected, result)
+		if !reflect.DeepEqual(result, tc.expected) {
+			t.Errorf("    --------- Test failed for %s - expected %v, got %v", tc.name, tc.expected, result)
+		} else {
+			fmt.Printf("    --------- Pass")
+		}
+		fmt.Println()
+	}
+	fmt.Println("\nOverall Result")
+}

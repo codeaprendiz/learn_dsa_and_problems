@@ -76,8 +76,8 @@ func (ll *LinkedList) prependNodeToListWithData(data int) {
 	}
 
 	newNode.next = ll.head
-	ll.
-
+	ll.head.prev = newNode
+	ll.head = newNode
 }
 
 // To display list in one line
@@ -92,7 +92,7 @@ func (ll *LinkedList) displayList() {
 }
 
 func main() {
-	ll := LinkedList{head: nil, tail: nil}
+	ll := LinkedList{head: nil}
 	ll.appendNodeToListWithData(1)
 	ll.appendNodeToListWithData(2)
 	ll.appendNodeToListWithData(3)

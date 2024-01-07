@@ -8,7 +8,7 @@ go: creating new go.mod: module doubly_linked_list
 go: to add module requirements and sums:
         go mod tidy
 
-$ go test                                                   
+$ go test
 
 
 -------------- Test Deletion From a Doubly LinkedList ----------------------------
@@ -37,8 +37,25 @@ List Details :
 Append multiple elements - Inputs: [1 2 3], Expected: [1 2 3], Result: [1 2 3]    --------- Pass
 
 Overall Result
+
+
+-------------- Test Prepending To a Doubly LinkedList ----------------------------
+
+Before Prepending...
+
+List Details : 
+Prepend single element - Inputs: [1], Expected: [1], Result: [1]    --------- Pass
+
+Before Prepending...
+
+List Details : 
+Prepend multiple elements - Inputs: [3 2 1], Expected: [1 2 3], Result: [1 2 3]    --------- Pass
+
+Overall Result
 PASS
-ok      doubly_linked_list      0.982s
+ok      doubly_linked_list      0.613s
+
+
 
 
 $ go run doubly_linked_list.go
@@ -256,3 +273,81 @@ Doubly LinkedList
 ```
 
 - The list now correctly reflects the removal of `val:2`, with adjacent nodes `val:1` and `val:3` linked directly to each other.
+
+## Prepend
+
+```go
+// Prepend function, to add at the begining of the list
+func (ll *LinkedList) prependNodeToListWithData(data int) {
+    newNode := &Node{val: data, prev: nil, next: nil}
+
+    if ll.head == nil {
+        ll.head = newNode
+        return
+    }
+
+    newNode.next = ll.head
+    ll.head.prev = newNode
+    ll.head = newNode
+}
+```
+
+Let's visually represent the process of prepending a node to a doubly linked list using the `prependToList` function. This will illustrate how the function adds a new node at the beginning of the list and updates the `prev` and `next` pointers.
+
+**Initial Doubly LinkedList:**
+
+```bash
+Doubly LinkedList (Before Prepension)
++-------+
+| head  |----->+-------+      +-------+
+|       |      | val:1 |      | val:2 |
++-------+      | next  |----->| next  |-----> nil
+               | prev  |<-----| prev  |
+               +-------+      +-------+
+```
+
+- The list currently has two nodes: `val:1` and `val:2`.
+
+**Step 1: Create a New Node (`val:X`)**
+
+```bash
+New Node
++-------+
+| val:X |   // 'X' is the new value
+| prev  |-----> nil
+| next  |-----> nil
++-------+
+```
+
+- A new node with `val: X` is created.
+
+**Step 2: Prepend the New Node to the List**
+
+- The new node's `next` is set to the current head (`val:1`).
+- The current head's `prev` is set to the new node.
+
+```bash
+Doubly LinkedList (After Prepension)
++-------+      +-------+      +-------+
+| head  |----->| val:X |----->| val:1 |----->+-------+
+|       |      | next  |      | next  |      | val:2 |
++-------+      | prev  |<-----| prev  |      | next  |-----> nil
+               +-------+      +-------+      | prev  |
+                                              +-------+
+```
+
+- `head` now points to the new node (`val:X`).
+
+**Final Doubly LinkedList (After Prepension of `val:X`):**
+
+```bash
+Doubly LinkedList
++-------+      +-------+      +-------+
+| head  |----->| val:X |----->| val:1 |----->| val:2 |-----> nil
+|       |      | next  |      | next  |      | next  |
++-------+      | prev  |<-----| prev  |<-----| prev  |
+               +-------+      +-------+      +-------+
+```
+
+- The new node (`val: X`) is successfully prepended to the beginning of the list.
+- The `prev` and `next` pointers are updated to maintain the integrity of the doubly linked structure.
