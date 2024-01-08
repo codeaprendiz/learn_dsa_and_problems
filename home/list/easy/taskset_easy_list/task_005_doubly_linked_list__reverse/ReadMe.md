@@ -28,7 +28,29 @@ List Details :  3  2  1
 
 ## reverse doubly linked list
 
-You are absolutely correct, and I apologize for the confusion. Let's clarify the reversal process more accurately:
+```go
+// To reverse a linked list
+func (ll *LinkedList) reverse() {
+    var temp *Node
+    cur := ll.head
+
+    for cur != nil {
+        // Swap the cur.prev and cur.next
+        temp = cur.prev
+        cur.prev = cur.next
+        cur.next = temp
+
+        // Move to the next node (which is current.prev after swapping)
+        cur = cur.prev
+    }
+
+    // Before changing head, check for the cases like
+    // empty list and list with only one node
+    if temp != nil {
+        ll.head = temp.prev
+    }
+}
+```
 
 **Initial Doubly LinkedList:**
 
