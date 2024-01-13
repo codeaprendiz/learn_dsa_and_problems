@@ -94,22 +94,6 @@ function createIndividualSectionsMarkdown($tree)
 }
 
 
-/*
-Function to create markdown in following format
-## Cloud Providers
-
-| AWS | OCI | GCP |
-| --- | --- | --- |
-| [Certification Digest](home/cloud-providers/aws/certifications-digest)<br> [Practice Tasks](home/cloud-providers/aws/practice-tasks) | [Practice Tasks](home/cloud-providers/oci/practice-tasks) | [Practice Tasks](home/cloud-providers/gcp/taskset) |
- When the  tree[][] contains
-    [taskset_aws_cloud_providers] => Array
-        (
-            [0] => - [task_001_kms](home/cloud_providers/aws/taskset_aws_cloud_providers/task_001_kms)
-            [1] => - [task_002_monitoring_msk](home/cloud_providers/aws/taskset_aws_cloud_providers/task_002_monitoring_msk)
-            [2] => - [task_003_redirection_using_s3_cloudfront](home/cloud_providers/aws/taskset_aws_cloud_providers/task_003_redirection_using_s3_cloudfront)
-        )
-*/
-
 function createGlobalMarkdownTable($tree) {
 
     $markdown = "# Home \n\n> Auto generated ReadMe\n\n";
@@ -121,6 +105,7 @@ function createGlobalMarkdownTable($tree) {
         "string",
         "list",
         "sorting",
+        "bst",
     );
     
     // for every value in topics array, print - [value](#value)

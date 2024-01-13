@@ -9,6 +9,7 @@
 - [String](#String)
 - [List](#List)
 - [Sorting](#Sorting)
+- [Bst](#Bst)
 
 ## Bit_manipulation
 
@@ -39,4 +40,10 @@
 | Easy                                |
 |-------------------------------------|
 | [Practice Tasks](home/sorting/easy) |
+
+## Bst
+
+| Easy                            |
+|---------------------------------|
+| [Practice Tasks](home/bst/easy) |
 
