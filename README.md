@@ -1,49 +1,46 @@
-# Home 
+# Home
 
-> Total Number of Tasks :       11
+> [Auto](https://github.com/codeaprendiz/learn_fullstack/blob/main/home/php/intermediate/taskset_intermediate_php/task_004_createGlobalMarkdownTable/generate-readme.php) generated ReadMe. Number of tasks: 11
 
-> Auto generated ReadMe
+- [arrays](#arrays)
+- [bit manipulation](#bit_manipulation)
+- [bst](#bst)
+- [list](#list)
+- [sorting](#sorting)
+- [string](#string)
 
-- [Bit Manipulation](#Bit_manipulation)
-- [Arrays](#Arrays)
-- [String](#String)
-- [List](#List)
-- [Sorting](#Sorting)
-- [Bst](#Bst)
+## arrays
 
-## Bit_manipulation
+| easy                         |
+|------------------------------|
+| [Tasks: 1](home/arrays/easy) |
 
-| Easy                                         |
-|----------------------------------------------|
-| [Practice Tasks](home/bit_manipulation/easy) |
+## bit_manipulation
 
-## Arrays
+| easy                                   |
+|----------------------------------------|
+| [Tasks: 1](home/bit_manipulation/easy) |
 
-| Easy                               |
-|------------------------------------|
-| [Practice Tasks](home/arrays/easy) |
+## bst
 
-## String
+| easy                      |
+|---------------------------|
+| [Tasks: 1](home/bst/easy) |
 
-| Easy                               | Medium                               |
-|------------------------------------|--------------------------------------|
-| [Practice Tasks](home/string/easy) | [Practice Tasks](home/string/medium) |
+## list
 
-## List
+| easy                       |
+|----------------------------|
+| [Tasks: 5](home/list/easy) |
 
-| Easy                             |
-|----------------------------------|
-| [Practice Tasks](home/list/easy) |
+## sorting
 
-## Sorting
+| easy                          |
+|-------------------------------|
+| [Tasks: 1](home/sorting/easy) |
 
-| Easy                                |
-|-------------------------------------|
-| [Practice Tasks](home/sorting/easy) |
+## string
 
-## Bst
-
-| Easy                            |
-|---------------------------------|
-| [Practice Tasks](home/bst/easy) |
-
+| easy                         | medium                         |
+|------------------------------|--------------------------------|
+| [Tasks: 1](home/string/easy) | [Tasks: 1](home/string/medium) |
