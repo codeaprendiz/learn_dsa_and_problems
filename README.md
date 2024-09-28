@@ -18,7 +18,7 @@
 
 ## bit_manipulation
 
-| easy                                 |
+| go                                   |
 |--------------------------------------|
 | [Tasks: 1](home/bit_manipulation/go) |
 
