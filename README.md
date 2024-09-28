@@ -12,42 +12,42 @@
 
 ## arrays
 
-| easy                         |
-|------------------------------|
-| [Tasks: 1](home/arrays/easy) |
+| go                         |
+|----------------------------|
+| [Tasks: 1](home/arrays/go) |
 
 ## bit_manipulation
 
-| easy                                   |
-|----------------------------------------|
-| [Tasks: 1](home/bit_manipulation/easy) |
+| easy                                 |
+|--------------------------------------|
+| [Tasks: 1](home/bit_manipulation/go) |
 
 ## bst
 
-| easy                      |
-|---------------------------|
-| [Tasks: 1](home/bst/easy) |
+| go                      |
+|-------------------------|
+| [Tasks: 1](home/bst/go) |
 
 ## dynamic_programming
 
-| easy                                      |
-|-------------------------------------------|
-| [Tasks: 1](home/dynamic_programming/easy) |
+| go                                      |
+|-----------------------------------------|
+| [Tasks: 1](home/dynamic_programming/go) |
 
 ## list
 
-| easy                       |
-|----------------------------|
-| [Tasks: 5](home/list/easy) |
+| go                       |
+|--------------------------|
+| [Tasks: 5](home/list/go) |
 
 ## sorting
 
-| easy                          |
-|-------------------------------|
-| [Tasks: 1](home/sorting/easy) |
+| go                          |
+|-----------------------------|
+| [Tasks: 1](home/sorting/go) |
 
 ## string
 
-| easy                         | medium                         |
-|------------------------------|--------------------------------|
-| [Tasks: 1](home/string/easy) | [Tasks: 1](home/string/medium) |
+| go                         |
+|----------------------------|
+| [Tasks: 2](home/string/go) |
