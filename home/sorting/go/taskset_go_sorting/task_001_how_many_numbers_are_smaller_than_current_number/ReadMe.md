@@ -4,6 +4,8 @@
 
 > Revised : 1
 
+<br>
+
 ## Solution
 
 ```go
@@ -30,6 +32,8 @@ func smallerNumbersThanCurrent(nums []int) []int {
 }
 ```
 
+<br>
+
 ## Setup
 
 ```bash
@@ -51,6 +55,8 @@ Overall Result
 PASS
 ok      how_many_numbers_are_smaller_than_current_number        0.425s
 ```
+
+<br>
 
 ## Dry Run
 
@@ -86,6 +92,8 @@ Let's do a dry run of the `smallerNumbersThanCurrent` function with the input `n
    - The function returns the `result` array, which is `[4, 0, 1, 1, 3]`.
 
 This dry run demonstrates how the function processes the input array to determine how many numbers are smaller than each number in it. The key part of this approach is using sorting and a map to efficiently count smaller numbers.
+
+<br>
 
 ## Time Complexity
 

@@ -2,6 +2,8 @@
 
 [leetcode.com » Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)
 
+<br>
+
 ## Run
 
 ```bash
@@ -27,6 +29,8 @@ Overall Result
 PASS
 ok      has_cycle       0.978s
 ```
+
+<br>
 
 ## has cycle
 
@@ -107,6 +111,8 @@ LinkedList
 
 - If `slow == fast` at any point, `hasCycle` returns `true`, indicating the presence of a cycle.
 - If `fast` reaches the end of the list (`nil`), `hasCycle` returns `false`, indicating no cycle.
+
+<br>
 
 ## Time And Space Complexity
 

@@ -1,5 +1,7 @@
 # Doubly Linked List
 
+<br>
+
 ## Run
 
 ```bash
@@ -61,6 +63,8 @@ ok      doubly_linked_list      0.613s
 $ go run doubly_linked_list.go
  1  2  3
 ```
+
+<br>
 
 ## Insert At The End of the List
 
@@ -170,6 +174,8 @@ Doubly LinkedList
 
 - The new node (`val: X`) is successfully appended to the end of the list, with proper `prev` and `next` pointers maintaining the doubly linked structure.
 
+<br>
+
 ## DeleteNode
 
 ```go
@@ -273,6 +279,8 @@ Doubly LinkedList
 ```
 
 - The list now correctly reflects the removal of `val:2`, with adjacent nodes `val:1` and `val:3` linked directly to each other.
+
+<br>
 
 ## Prepend
 

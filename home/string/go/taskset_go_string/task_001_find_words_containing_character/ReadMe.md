@@ -4,6 +4,8 @@
 
 > Revision Count : 1
 
+<br>
+
 ## Solution
 
 ```go
@@ -18,10 +20,14 @@ func findWordsContaining(words []string, x byte) []int {
 }
 ```
 
+<br>
+
 ## Notes
 
 1. In the function `findWordsContaining`, the second argument `x` is of type `byte` because individual characters in Go can be conveniently represented as bytes when dealing with ASCII characters. The `byte` type in Go is an alias for `uint8` and is commonly used to handle individual ASCII characters.
 2. However, the `strings.Contains` function requires its second argument to be a string, not a single byte. This is why `x` needs to be converted to a string before being passed to `strings.Contains`.
+
+<br>
 
 ## Setup
 
@@ -40,6 +46,8 @@ Overall Result
 PASS
 ok      find_words_containing_character 0.293s
 ```
+
+<br>
 
 ## Complexity
 

@@ -10,11 +10,15 @@
 - [sorting](#sorting)
 - [string](#string)
 
+<br>
+
 ## arrays
 
 | go                         |
 |----------------------------|
 | [Tasks: 1](home/arrays/go) |
+
+<br>
 
 ## bit_manipulation
 
@@ -22,11 +26,15 @@
 |--------------------------------------|
 | [Tasks: 1](home/bit_manipulation/go) |
 
+<br>
+
 ## bst
 
 | go                      |
 |-------------------------|
 | [Tasks: 1](home/bst/go) |
+
+<br>
 
 ## dynamic_programming
 
@@ -34,17 +42,23 @@
 |-----------------------------------------|
 | [Tasks: 1](home/dynamic_programming/go) |
 
+<br>
+
 ## list
 
 | go                       |
 |--------------------------|
 | [Tasks: 5](home/list/go) |
 
+<br>
+
 ## sorting
 
 | go                          |
 |-----------------------------|
 | [Tasks: 1](home/sorting/go) |
+
+<br>
 
 ## string
 

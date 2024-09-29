@@ -1,5 +1,7 @@
 # Single Linked List
 
+<br>
+
 ## Setup
 
 ```bash
@@ -35,6 +37,8 @@ PASS
 ok      single_linked_list      0.438s
 ```
 
+<br>
+
 ## Node
 
 ```go
@@ -52,6 +56,8 @@ Node
 | next  |-----> [Address of Next Node / nil]
 +-------+
 ```
+
+<br>
 
 ## LinkedList
 
@@ -79,6 +85,8 @@ LinkedList
                   |              |
                 Node 1         Node 2
 ```
+
+<br>
 
 ## Appending to a list (Adding node to the end of list)
 
@@ -181,6 +189,8 @@ LinkedList
 
 - The new node is successfully appended to the end of the list.
 
+<br>
+
 ## Deleting a Node from a list
 
 ```go
@@ -282,6 +292,8 @@ LinkedList
 ```
 
 - `Node 2` successfully deleted.
+
+<br>
 
 ## Insert at the front of a list, Prepend to a list
 

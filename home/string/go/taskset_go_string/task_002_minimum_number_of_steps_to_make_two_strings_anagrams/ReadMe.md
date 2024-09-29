@@ -6,6 +6,8 @@
 
 An Anagram of a string is a string that contains the same characters with a different (or the same) ordering.
 
+<br>
+
 ## Solution
 
 ```go
@@ -33,6 +35,8 @@ func minStepsToMakeAnagram(s string, t string) int {
 }
 ```
 
+<br>
+
 ### Why use `rune`?
 
 In Go, a rune represents a Unicode code point. It's essentially an alias for int32, and it's used to handle individual characters in a string, especially when dealing with Unicode characters that may occupy more than one byte.
@@ -42,6 +46,8 @@ In Go, a rune represents a Unicode code point. It's essentially an alias for int
 2. **Correct String Iteration**: When iterating over a string with `for...range` in Go, the iteration variable is a `rune`. This approach accurately handles multi-byte Unicode characters, ensuring each character, regardless of its byte size, is processed correctly.
 
 3. **Best Practice**: Using `rune` is recommended in Go for character handling, even for ASCII-only strings, as it makes the code more versatile and robust for different types of text data.
+
+<br>
 
 ## Skills
 
@@ -63,6 +69,8 @@ Overall Result
 PASS
 ok      minimum_number_of_steps_to_make_two_strings_anagrams    0.348s
 ```
+
+<br>
 
 ## Dry Run
 
@@ -92,6 +100,8 @@ Let's perform a dry run of the `minStepsToMakeAnagram` function with the input s
 
 5. **Return Result**:
    - The function returns `steps`, which is `1`.
+
+<br>
 
 ## Complexity
 

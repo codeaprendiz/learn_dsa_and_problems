@@ -11,6 +11,8 @@
     - [Final Result](#final-result)
   - [Unit Tests](#unit-tests)
 
+<br>
+
 ## Solution
 
 ```go
@@ -33,6 +35,8 @@ func countBits(n int) []int {
 }
 ```
 
+<br>
+
 ### Explanation of Changes
 
 1. **Initialization**: Create a slice `ans` of length `n + 1` to store the results.
@@ -42,9 +46,13 @@ func countBits(n int) []int {
 
 By using this approach, we ensure that the program computes the result in linear time, `( O(n) )`, by leveraging previously computed results. This updated program adheres to the optimized dynamic programming approach.
 
+<br>
+
 ## Explaination
 
 Let's break down the process step-by-step using the same dynamic programming approach to calculate the number of 1 bits in the binary representation of numbers from 0 to `( n )`.
+
+<br>
 
 ### Dynamic Programming Approach
 
@@ -61,6 +69,8 @@ Let's break down the process step-by-step using the same dynamic programming app
    - For any odd number `( x )`, the count of 1 bits is the count of 1 bits in `( x / 2 )` plus 1 (for the least significant bit, which is 1).
    - This is because shifting an odd number to the right by one bit (i.e., dividing by 2) reduces the number but the least significant bit (which is 1) is lost.
    - Formula: `result[x] = result[x / 2] + 1`
+
+<br>
 
 ### Example Calculation for `( n = 5 )`
 
@@ -92,6 +102,8 @@ Let's break down the process step-by-step using the same dynamic programming app
     - `result[5] = result[5 / 2] + 1 = result[2] + 1 = 1 + 1 = 2`
     - `result = [0, 1, 1, 2, 1, 2]`
 
+<br>
+
 ### Final Result
 
 The final `result` array, which contains the number of 1 bits for each integer from 0 to 5, is:
@@ -99,6 +111,8 @@ The final `result` array, which contains the number of 1 bits for each integer f
 `result = [0, 1, 1, 2, 1, 2]`
 
 This approach uses dynamic programming to build up the solution from known results, ensuring an efficient computation with a time complexity of `O(n)`.
+
+<br>
 
 ## Unit Tests
 

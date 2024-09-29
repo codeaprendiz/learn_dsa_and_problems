@@ -4,6 +4,8 @@
 
 > Revision Count : 1
 
+<br>
+
 ## Solution
 
 ```go
@@ -25,6 +27,8 @@ func Solution(N int) int {
 }
 ```
 
+<br>
+
 ## Setup
 
 ```bash
@@ -43,6 +47,8 @@ PASS
 ok      binary_gap      0.471s
 ```
 
+<br>
+
 ## Approach
 
 To solve this problem, we can convert the integer `N` into its binary representation and then iterate through the binary string to find the longest sequence of zeros that is flanked by ones. Here's a step-by-step approach:
@@ -54,6 +60,8 @@ To solve this problem, we can convert the integer `N` into its binary representa
 5. **Return the Maximum Gap**: After iterating through the entire string, return the maximum gap found.
 
 This function should work efficiently for the given range of integers `[1..2,147,483,647]`. The time complexity is O(log N) since the binary representation of a number `N` has a length proportional to the logarithm of `N`, and the space complexity is also O(log N) due to the storage of the binary representation.
+
+<br>
 
 ### Why use `binaryN := strconv.FormatInt(int64(N), 2)`
 
@@ -69,10 +77,14 @@ By explicitly converting `N` to `int64`, you make sure that the `FormatInt` func
 
 If `N` is already an `int64`, then the explicit conversion is not necessary, but it does not harm and makes the code more explicit and possibly clearer.
 
+<br>
+
 ### Why us string(bit) to print Binary
 
 In Go, when you iterate over a string with a range loop, each character (or more precisely, each rune) is represented by its Unicode code point. The Unicode code points for the characters '0' and `1` are 48 and 49, respectively, in decimal. That's why you see 48 when you print a '0' bit and 49 when you print a `1` bit. 
 If you want to print the character itself ('0' or `1`) rather than its Unicode code point, you need to convert the rune back into a character. This can be done simply by using the string() function to convert the rune to a string
+
+<br>
 
 ## Time And Space Complexity
 

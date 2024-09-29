@@ -2,6 +2,8 @@
 
 [www.geeksforgeeks.org » Binary Search Tree](https://www.geeksforgeeks.org/binary-search-tree-data-structure/)
 
+<br>
+
 ## [Binary Search Tree (BST) Traversals – Inorder, Preorder, Post Order](https://www.geeksforgeeks.org/binary-search-tree-traversal-inorder-preorder-post-order)
 
 ```bash
@@ -30,6 +32,8 @@ Postorder : left subtree -> right subtree -> root
 8 18 14 26 40 30 25
 ```
 
+<br>
+
 ## Structure
 
 ```go
@@ -46,7 +50,11 @@ type BST struct {
 }
 ```
 
+<br>
+
 ## Operations
+
+<br>
 
 ### Insertion
 
@@ -66,6 +74,8 @@ func insertNode(root *Node, key int) *Node {
     return root
 }
 ```
+
+<br>
 
 ### Inorder Traversal
 
@@ -96,6 +106,8 @@ func (bst *BST) InOrderTraversal() []int {
 
 4. **Concurrency and Race Conditions**: The `InOrderTraversal` function operates sequentially without concurrency, eliminating the risk of race conditions.
 
+<br>
+
 ### PreOrder Traversal
 
 ```go
@@ -118,6 +130,8 @@ func (bst *BST) PreOrderTraversal() []int {
 }
 ```
 
+<br>
+
 ### PostOrder Traversal
 
 ```go
@@ -139,6 +153,8 @@ func (bst *BST) PostOrderTraversal() []int {
     return sliceOfPostOrder
 }
 ```
+
+<br>
 
 ## Run
 

@@ -4,6 +4,8 @@
 
 > Revision Count : 1
 
+<br>
+
 ## Solution
 
 ```bash
@@ -17,6 +19,8 @@ func getConcatenation(nums []int) []int {
     return ans
 }
 ```
+
+<br>
 
 ## Setup
 
@@ -34,6 +38,8 @@ Overall Result
 PASS
 ok      concatenation_of_array  1.120s
 ```
+
+<br>
 
 ## Time and Space Complexity
 
