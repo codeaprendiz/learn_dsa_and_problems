@@ -38,12 +38,8 @@ func (ll *LinkedList) appendToList(data int) {
 func (ll *LinkedList) prependToList(data int) {
 	newNode := &Node{val: data, next: nil} // Create a new Node
 
-	if ll.head == nil { // If the list is empty, make the new node the head
-		ll.head = newNode
-	} else { // If the list is not empty
-		newNode.next = ll.head // Point the new node's 'next' to the current head
-		ll.head = newNode      // Update the head of the list to the new node
-	}
+	newNode.next = ll.head // Point the new node's 'next' to the current head
+	ll.head = newNode      // Update the head of the list to the new node
 }
 
 // Delete from list the value data, it can be at multiple places in the list
