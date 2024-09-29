@@ -34,6 +34,9 @@
 
 ## dictionaries_and_hashmaps
 
+| python                                            |
+|---------------------------------------------------|
+| [Tasks: 1](home/dictionaries_and_hashmaps/python) |
 
 ## dynamic_programming
 
