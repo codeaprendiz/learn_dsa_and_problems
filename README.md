@@ -1,10 +1,11 @@
 # Home
 
-> [Auto](https://github.com/codeaprendiz/learn_fullstack/blob/main/home/php/intermediate/taskset_intermediate_php/task_004_createGlobalMarkdownTable/generate-readme.php) generated ReadMe. Number of tasks: 29
+> [Auto](https://github.com/codeaprendiz/learn_fullstack/blob/main/home/php/intermediate/taskset_intermediate_php/task_004_createGlobalMarkdownTable/generate-readme.php) generated ReadMe. Number of tasks: 30
 
 - [arrays](#arrays)
 - [bit manipulation](#bit_manipulation)
 - [bst](#bst)
+- [dictionaries and hashmaps](#dictionaries_and_hashmaps)
 - [dynamic programming](#dynamic_programming)
 - [linked lists](#linked_lists)
 - [problems](#problems)
@@ -30,6 +31,9 @@
 | go                      |
 |-------------------------|
 | [Tasks: 1](home/bst/go) |
+
+## dictionaries_and_hashmaps
+
 
 ## dynamic_programming
 
