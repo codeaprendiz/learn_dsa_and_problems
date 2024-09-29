@@ -1,16 +1,15 @@
 # Home
 
-> [Auto](https://github.com/codeaprendiz/learn_fullstack/blob/main/home/php/intermediate/taskset_intermediate_php/task_004_createGlobalMarkdownTable/generate-readme.php) generated ReadMe. Number of tasks: 12
+> [Auto](https://github.com/codeaprendiz/learn_fullstack/blob/main/home/php/intermediate/taskset_intermediate_php/task_004_createGlobalMarkdownTable/generate-readme.php) generated ReadMe. Number of tasks: 26
 
 - [arrays](#arrays)
 - [bit manipulation](#bit_manipulation)
 - [bst](#bst)
 - [dynamic programming](#dynamic_programming)
 - [list](#list)
+- [problems](#problems)
 - [sorting](#sorting)
-- [string](#string)
-
-<br>
+- [strings](#strings)
 
 ## arrays
 
@@ -18,15 +17,11 @@
 |----------------------------|
 | [Tasks: 1](home/arrays/go) |
 
-<br>
-
 ## bit_manipulation
 
 | go                                   |
 |--------------------------------------|
 | [Tasks: 1](home/bit_manipulation/go) |
-
-<br>
 
 ## bst
 
@@ -34,34 +29,32 @@
 |-------------------------|
 | [Tasks: 1](home/bst/go) |
 
-<br>
-
 ## dynamic_programming
 
 | go                                      |
 |-----------------------------------------|
 | [Tasks: 1](home/dynamic_programming/go) |
 
-<br>
-
 ## list
 
-| go                       |
-|--------------------------|
-| [Tasks: 5](home/list/go) |
+| go                       | python                       |
+|--------------------------|------------------------------|
+| [Tasks: 5](home/list/go) | [Tasks: 2](home/list/python) |
 
-<br>
+## problems
+
+| python                            |
+|-----------------------------------|
+| [Tasks: 10](home/problems/python) |
 
 ## sorting
 
-| go                          |
-|-----------------------------|
-| [Tasks: 1](home/sorting/go) |
+| go                          | python                          |
+|-----------------------------|---------------------------------|
+| [Tasks: 1](home/sorting/go) | [Tasks: 2](home/sorting/python) |
 
-<br>
+## strings
 
-## string
-
-| go                         |
-|----------------------------|
-| [Tasks: 2](home/string/go) |
+| python                          |
+|---------------------------------|
+| [Tasks: 1](home/strings/python) |
