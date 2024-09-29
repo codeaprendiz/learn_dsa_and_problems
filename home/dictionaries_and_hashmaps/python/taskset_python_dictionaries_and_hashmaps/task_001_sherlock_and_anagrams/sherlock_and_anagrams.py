@@ -26,7 +26,7 @@ def sherlockAndAnagrams(s):
     anagram_pairs = 0
     for count in substring_dict.values():
         # If count > 1, we can have anagram pairs
-        anagram_pairs += (count * (count - 1)) // 2
+        anagram_pairs += (count * (count - 1)) // 2 # // (floor division) ensures the result is always an integer by rounding down if necessary. 
     
     return anagram_pairs
 
